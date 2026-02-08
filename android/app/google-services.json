@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "804050044330",
+    "project_id": "citychurch-edb19",
+    "storage_bucket": "citychurch-edb19.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804050044330:android:490e0312a4a4454497d7d3",
+        "android_client_info": {
+          "package_name": "app.sam.citychurch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804050044330-cnsi16roh8l1i64u88tetc6v25uqd9t2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.sam.citychurch",
+            "certificate_hash": "4c541d1a5fe37505c533dd58139dab10da4fd9f7"
+          }
+        },
+        {
+          "client_id": "804050044330-06r5sreh1luqdjb95vgu6a4ddogrd6gc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBScMO84BFxFhh-Ixgn8mgzQna17M2uPlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804050044330-06r5sreh1luqdjb95vgu6a4ddogrd6gc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "804050044330-rkj84bl3998keti97bt9gvma9ivulej7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.citychurch"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
