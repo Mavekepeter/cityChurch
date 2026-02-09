@@ -1,5 +1,7 @@
 import 'package:citychurch/components/drawer_tile.dart';
+import 'package:citychurch/features/announcement/presentation/announcement_page.dart';
 import 'package:citychurch/features/auth/presentation/cubits/auth_cubit.dart';
+import 'package:citychurch/features/events/presentation/event_page.dart';
 import 'package:citychurch/features/settings/presentation/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -72,6 +74,35 @@ class MyDrawer extends StatelessWidget {
                     );
                   },
                 ),
+                
+                //setting tile
+                MyDrawerTile(
+                  text: "Events",
+                  icon: Icons.event,
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyeventsPage()),
+                    );
+                  },
+                ),
+                
+
+
+                 MyDrawerTile(
+                  text: "Announcements",
+                  icon: Icons.announcement,
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyannouncementPage()),
+                    );
+                  },
+                ),
+
+                
               ],
             ),
             //logout tile
