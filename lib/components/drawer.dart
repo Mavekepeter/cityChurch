@@ -2,6 +2,8 @@ import 'package:citychurch/components/drawer_tile.dart';
 import 'package:citychurch/features/announcement/presentation/announcement_page.dart';
 import 'package:citychurch/features/auth/presentation/cubits/auth_cubit.dart';
 import 'package:citychurch/features/events/presentation/event_page.dart';
+import 'package:citychurch/features/offerings/offerings_page.dart';
+import 'package:citychurch/features/sermon/sermon_page.dart';
 import 'package:citychurch/features/settings/presentation/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -54,7 +56,24 @@ class MyDrawer extends StatelessWidget {
             Column(
               children: [
                 //header
-                DrawerHeader(child: Icon(Icons.favorite)),
+                DrawerHeader(
+                  
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(60),
+                        child: Image.asset(
+                          "lib/assets/icon.jpeg",
+                          width: 90,
+                          height: 90,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
                 //home tile
                 MyDrawerTile(
                   text: "Home",
@@ -74,7 +93,7 @@ class MyDrawer extends StatelessWidget {
                     );
                   },
                 ),
-                
+
                 //setting tile
                 MyDrawerTile(
                   text: "Events",
@@ -87,23 +106,50 @@ class MyDrawer extends StatelessWidget {
                     );
                   },
                 ),
-                
 
+                //offering tile
+                MyDrawerTile(
+                  text: "offerings & Tiths",
+                  icon: Icons.wallet_giftcard,
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => OfferingsPage()),
+                    );
+                  },
+                ),
 
-                 MyDrawerTile(
+                //sermons tile
+                MyDrawerTile(
+                  text: "Sermons",
+                  icon: Icons.wordpress_rounded,
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>SermonsPage()),
+                    );
+                  },
+                ),
+
+                //announcements
+                MyDrawerTile(
                   text: "Announcements",
                   icon: Icons.announcement,
                   onTap: () {
                     Navigator.pop(context);
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => MyannouncementPage()),
+                      MaterialPageRoute(
+                        builder: (context) => MyannouncementPage(),
+                      ),
                     );
                   },
                 ),
-
-                
               ],
+
+
             ),
             //logout tile
             MyDrawerTile(
